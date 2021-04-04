@@ -10,7 +10,7 @@ Feature: login to website
     And Click on following button in the "login" page
       | LogInButton |
 
-  Scenario: login with valid credentials
+  Scenario: Contact use button is working
     And Click on following button in the "home" page
       | Contact us |
     And Enter the following values in the "myAccount" page

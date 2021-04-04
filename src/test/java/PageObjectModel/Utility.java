@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.Set;
 
 public class Utility {
 
@@ -103,7 +104,9 @@ public class Utility {
 
 
     public WebElement findElementByText(String elementToFindByText){
-        return driver.findElement(By.xpath("//*[contains(text(),'"+elementToFindByText+"')]"));
+        By elementToWait =By.xpath("//*[contains(text(),'"+elementToFindByText+"')]");
+        waitForVisible(elementToWait);
+        return driver.findElement(elementToWait);
     }
 
     public void waitForVisible(By element){
@@ -112,6 +115,20 @@ public class Utility {
 
     public void waitForClickable(By element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void switchToNextWindow(){
+        Set<String> pages = driver.getWindowHandles();
+
+        for (String wind:pages) {
+
+            driver.switchTo().window(wind);
+        }
+
+    }
+
+    public void closeTheCurrentPage(String whichCommand){
+        driver.close();
     }
 
 

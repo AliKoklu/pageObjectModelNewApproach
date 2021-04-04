@@ -1,4 +1,4 @@
-Feature: login to website
+Feature: Subscribe
 
   Background:
     Given navigate to website
@@ -10,7 +10,7 @@ Feature: login to website
     And Click on following button in the "login" page
       | LogInButton |
 
-  Scenario: login with valid credentials
+  Scenario: Subscribe valid email
     And Enter the following values in the "home" page
       | subscribeInput | asd1223@gmail.com |
     And Click on following button in the "home" page
@@ -19,7 +19,7 @@ Feature: login to website
       | Thank you for signing up! A verification email has been sent. We appreciate your interest. |
 
 
-  Scenario: login with valid credentials
+  Scenario: Subscribe invalid email
     And Enter the following values in the "home" page
       | subscribeInput | asd |
     And Click on following button in the "home" page

@@ -23,7 +23,9 @@ public class Elements extends Utility {
             return loginElement.get(whichKey);
         }
 
-        public String HomePageElement(String whichKey){
+
+
+    public String HomePageElement(String whichKey){
 
             Map<String, String> loginElement = new HashMap<>();
 
@@ -36,15 +38,34 @@ public class Elements extends Utility {
 
 
             return loginElement.get(whichKey);
-        }
+    }
 
-        public String myAccountPage(String whichKey){
+    public String HomePageFooter(String whichKey){
+
+        Map<String, String> loginElement = new HashMap<>();
+
+        loginElement.put("ShippingReturns", "xpath //a[text()='Shipping & Returns']" );
+        loginElement.put("PrivacyNotice", "xpath //a[text()='Privacy Notice']" );
+        loginElement.put("Conditions_of_Use", "xpath //a[text()='Conditions of Use']" );
+        loginElement.put("aboutUs", "xpath //a[text()='About us']" );
+        loginElement.put("My_account", "xpath //a[text()='My account']" );
+        loginElement.put("orders", "xpath //a[text()='Orders']" );
+        loginElement.put("Addresses", "xpath //a[text()='Addresses']" );
+        loginElement.put("Shopping_cart", "xpath //a[text()='Shopping cart']" );
+        loginElement.put("Wishlist", "xpath //a[text()='Wishlist']" );
+
+
+        return loginElement.get(whichKey);
+    }
+
+
+
+    public String myAccountPage(String whichKey){
 
             Map<String, String> loginElement = new HashMap<>();
 
             loginElement.put("enquiry", "id Enquiry" );
             loginElement.put("submitButton", "xpath //*[@value='Submit']" );
-
 
             return loginElement.get(whichKey);
         }
@@ -58,6 +79,8 @@ public class Elements extends Utility {
                 locatorTypeAndLocator = HomePageElement(elementName);
             }else if(whichPage.equalsIgnoreCase("myAccount")){
                 locatorTypeAndLocator = myAccountPage(elementName);
+            }else if(whichPage.equalsIgnoreCase("HomePageFooter")){
+                locatorTypeAndLocator = HomePageFooter(elementName);
             }
 
             int i1 = locatorTypeAndLocator.indexOf(" ");
@@ -77,6 +100,8 @@ public class Elements extends Utility {
             locatorTypeAndLocator = HomePageElement(elementName);
         }else if(whichPage.equalsIgnoreCase("myAccount")){
             locatorTypeAndLocator = myAccountPage(elementName);
+        }else if(whichPage.equalsIgnoreCase("HomePageFooter")){
+            locatorTypeAndLocator = HomePageFooter(elementName);
         }
 
         String[] locatortypeAndLocatorArray = locatorTypeAndLocator.split(" ");
