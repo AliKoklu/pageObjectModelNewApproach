@@ -1,0 +1,35 @@
+
+  {
+    "LoginPageElement": {
+      "Email": "id Email",
+      "Password": "id Password",
+      "LogInButton": "xpath //input[@value='Log in']",
+      "login": "xpath //a[text()='Log in']"
+    },
+    "HomePageElement": {
+      "Contact us": "xpath //*[text()='Contact us']",
+      "my account": "xpath //a[text()='My account']",
+      "orders": "xpath //a[text()='Orders']",
+      "Addresses": "xpath //a[text()='Addresses']",
+      "subscribeInput": "xpath //*[@id='newsletter-email']",
+      "subscribeButton": "xpath //*[@id='newsletter-subscribe-button']",
+      "electronics": "xpath //a[contains(text(),'Electronics')]",
+      "cameraAndPhoto": "xpath //a[contains(text(),'Camera, photo')]"
+    },
+    "HomePageFooter": {
+      "ShippingReturns": "xpath //a[text()='Shipping & Returns']",
+      "PrivacyNotice": "xpath //a[text()='Privacy Notice']",
+      "Conditions_of_Use": "xpath //a[text()='Conditions of Use']",
+      "aboutUs": "xpath //a[text()='About us']",
+      "My_account": "xpath //a[text()='My account']",
+      "orders": "xpath //a[text()='Orders']",
+      "Addresses": "xpath //a[text()='Addresses']",
+      "Shopping_cart": "xpath //a[text()='Shopping cart']",
+      "Wishlist": "xpath //a[text()='Wishlist']"
+    },
+    "myAccountPage": {
+      "enquiry": "id Enquiry",
+      "submitButton": "xpath //a[text()='Privacy Notice']",
+      "Conditions_of_Use": "xpath //*[@value='Submit']"
+    }
+  }

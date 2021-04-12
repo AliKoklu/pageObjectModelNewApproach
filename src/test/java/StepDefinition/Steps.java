@@ -3,6 +3,7 @@ package StepDefinition;
 import PageObjectModel.Elements;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -57,5 +58,10 @@ public class Steps {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @And("^Hover over on the following element \"([^\"]*)\" in the \"([^\"]*)\" page$")
+    public void hoverOverOnTheFollowingElementInThePage(String elementName, String whichPage) throws Throwable {
+        elements.hoverOver(elementName,whichPage);
     }
 }
