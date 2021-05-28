@@ -19,3 +19,6 @@ Feature: login to website
       | submitButton |
     Then Verify following texts in the "contact page" page
       | Your enquiry has been successfully sent to the store owner. |
+
+
+
